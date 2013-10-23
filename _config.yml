@@ -5,8 +5,8 @@ layouts:     ./_layouts
 include:     ['.htaccess']
 exclude:     []
 keep_files:  ['.git','.svn']
-timezone:    nil
-encoding:    nil
+timezone:   America/Los_Angeles
+encoding:   UTF-8
 
 future:      true
 show_drafts: nil
@@ -31,7 +31,7 @@ host:        0.0.0.0
 port:        4000
 baseurl:     /
 url:         http://localhost:4000
-lsi:         false
+lsi:         true
 
 maruku:
   use_tex:    false
