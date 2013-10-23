@@ -1,6 +1,8 @@
 timezone:   America/Los_Angeles
 encoding:   UTF-8
 
+exclude:    ["vendor"]
+
 markdown:      redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
 textile_ext:   textile
