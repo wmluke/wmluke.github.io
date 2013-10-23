@@ -5,5 +5,5 @@ title: First Post!
 # First Post!
 
 ```javascript
-var a = 1 + 1;
+var a = 1 + 2;
 ```
