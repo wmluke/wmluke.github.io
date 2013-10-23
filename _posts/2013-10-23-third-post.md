@@ -1,5 +1,6 @@
 ---
-published: true
+layout: posts
+title: Third Post!
 ---
 
 ## A New Post
