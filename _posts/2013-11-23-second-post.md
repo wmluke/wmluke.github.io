@@ -5,5 +5,5 @@ title: Second Post!
 # Second Post!
 
 ```javascript
-var a = 1 + 2;
+var a = 2 + 2;
 ```
