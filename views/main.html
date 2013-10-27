@@ -1,0 +1,15 @@
+<div data-extend-template="/views/layouts/main-layout.html">
+
+    <div data-block="content-area">
+        <div class="thought-container" ng-repeat="thought in thoughts">
+            <div class="markdown-body" compile="thought.html"></div>
+            <ul class="thought-meta-list">
+                <li>{{published(thought) | date:'mediumDate'}}</li>
+                <li>
+                    <a class="permlink" href="#!/thoughts/{{thought.id}}">permlink</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

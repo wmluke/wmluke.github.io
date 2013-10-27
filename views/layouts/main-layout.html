@@ -1,0 +1,101 @@
+<div id="iosKeyboardProxy" class="hide"></div>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="#">The Bunsel Blog</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+
+                    <li>
+                        <a href="#!/thoughts" data-toggle="collapse" data-target=".nav-collapse">
+                            <i class="icon-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!/thoughts/stream/photos" data-toggle="collapse" data-target=".nav-collapse">
+                            Photos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!/thoughts/stream/design" data-toggle="collapse" data-target=".nav-collapse">
+                            Change log
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!/thoughts/about" data-toggle="collapse" data-target=".nav-collapse">
+                            About
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" data-role="page">
+
+    <div class="row" data-role="header"></div>
+    <div class="row">
+        <div class="span1 visible-desktop">&nbsp;</div>
+        <div class="span2 hidden-phone" data-role="left-nav">
+            <img class="photo profile-photo" src="/images/02418e10.profile-paris.jpg">
+
+            <p class="hello-paragraph lead lead-small">
+                Hello, my name is Luke Bunselmeyer. This is my Blog.
+                I hope you like it. Enjoy...
+            </p>
+
+            <div class="clearfix hidden-phone">
+
+                <ul class="social-icon-list unstyled">
+
+                    <li>
+                        <a target="_BLANK" href="https://github.com/wmluke">
+                            <img class="socialIcon" src="/images/icons/0c628ee6.github.png" alt="GitHub" title="GitHub">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_BLANK" href="http://www.linkedin.com/in/wmluke">
+                            <img class="socialIcon" src="/images/icons/481d9263.linkedin.png" alt="LinkedIn">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_BLANK" href="http://www.flickr.com/wmluke">
+                            <img class="socialIcon" src="/images/icons/6aea1746.flickr.png" alt="Flickr">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_BLANK" href="http://www.facebook.com/wmluke">
+                            <img class="socialIcon" src="/images/icons/7c11a867.facebook.png" alt="Facebook">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="span9" data-role="content">
+            <div class="alert alert-block hide" app-flash="error">
+                <a class="close" data-dismiss="alert" href="#">×</a>
+                <h4 class="alert-heading">Oops!</h4>
+
+                <p class="alert-message">${getFlashError()}</p>
+            </div>
+
+            <div data-block="content-area">[content-area]</div>
+        </div>
+    </div>
+    <div class="row" data-role="footer"></div>
+</div>
