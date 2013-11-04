@@ -2,6 +2,9 @@
 
     <div data-block="content-area">
         <div class="thought-container" ng-repeat="thought in thoughts">
+            <div class="thought-header">
+                <h1 class="hd-title"><a ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
+            </div>
             <div class="markdown-body" compile="thought.html"></div>
             <ul class="thought-meta-list">
                 <li>{{published(thought) | date:'mediumDate'}}</li>
