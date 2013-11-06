@@ -9,34 +9,29 @@
                 <span class="icon-bar"></span>
             </a>
 
-            <a class="brand" href="#">The Bunsel Blog</a>
+            <a class="brand" href="/">The Bunsel Blog</a>
 
             <div class="nav-collapse">
                 <ul class="nav">
-
-                    <li>
-                        <a href="#!/thoughts" data-toggle="collapse" data-target=".nav-collapse">
-                            <i class="icon-home"></i>
-                            Home
-                        </a>
-                    </li>
                     <li>
                         <a href="#!/thoughts/stream/projects" data-toggle="collapse" data-target=".nav-collapse">
+                            <i class="fa fa-rocket"></i>
                             Projects
                         </a>
                     </li>
                     <li>
                         <a href="#!/thoughts/stream/photos" data-toggle="collapse" data-target=".nav-collapse">
+                            <i class="fa fa-camera"></i>
                             Photos
                         </a>
                     </li>
                     <li>
                         <a href="#!/thoughts/about" data-toggle="collapse" data-target=".nav-collapse">
+                            <i class="fa fa-user"></i>
                             About
                         </a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </div>
@@ -55,31 +50,54 @@
                 I hope you like it. Enjoy...
             </p>
 
-            <div class="clearfix hidden-phone">
+            <div class="clearfix hidden-phone side-nav">
 
+                <h4 class="hd-side-nav" ng-show="thoughts.length>1">{{ stream || 'Home' }}</h4>
+                <ul class="nav nav-pills nav-stacked nav-toc" ng-show="thoughts.length>1">
+                    <li ng-repeat="thought in thoughts">
+                        <a ng-href="#!/thoughts/{{thought.id}}">
+                            <i class="fa fa-plus"></i>
+                            {{ thought.title }}
+                        </a>
+                    </li>
+                </ul>
+
+                <h4 class="hd-side-nav">Connect</h4>
                 <ul class="social-icon-list unstyled">
 
                     <li>
                         <a target="_BLANK" href="https://github.com/wmluke">
-                            <img class="socialIcon" src="/images/icons/0c628ee6.github.png" alt="GitHub" title="GitHub">
+                            <i class="fa fa-lg fa-github"></i>
                         </a>
                     </li>
 
                     <li>
                         <a target="_BLANK" href="http://www.linkedin.com/in/wmluke">
-                            <img class="socialIcon" src="/images/icons/481d9263.linkedin.png" alt="LinkedIn">
+                            <i class="fa fa-lg fa-linkedin-square"></i>
                         </a>
                     </li>
 
                     <li>
                         <a target="_BLANK" href="http://www.flickr.com/wmluke">
-                            <img class="socialIcon" src="/images/icons/6aea1746.flickr.png" alt="Flickr">
+                            <i class="fa fa-lg fa-flickr"></i>
                         </a>
                     </li>
 
                     <li>
                         <a target="_BLANK" href="http://www.facebook.com/wmluke">
-                            <img class="socialIcon" src="/images/icons/7c11a867.facebook.png" alt="Facebook">
+                            <i class="fa fa-lg fa-facebook-square"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_BLANK" href="https://www.google.com/+LukeBunselmeyer">
+                            <i class="fa fa-lg fa-google-plus-square"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_BLANK" href="https://twitter.com/wmluke">
+                            <i class="fa fa-lg fa-twitter-square"></i>
                         </a>
                     </li>
                 </ul>
