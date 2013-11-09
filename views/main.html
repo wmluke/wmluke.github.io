@@ -1,18 +1,28 @@
 <div data-extend-template="/views/layouts/main-layout.html">
 
     <div data-block="content-area">
-        <div class="thought-container" ng-repeat="thought in thoughts">
-            <div class="thought-header">
-                <h1 class="hd-title"><a ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
+        <div class="row thought-container" ng-repeat="thought in thoughts">
+            <div class="span2 thought-meta">
+                <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>
+
+                <p class="thought-streams">
+                    <small>
+                        <a ng-href="#!/thoughts/stream/{{ stream }}" class="thought-stream" ng-repeat="stream in thought.streams"> {{ stream }}</a>
+                    </small>
+                </p>
+
             </div>
-            <div class="markdown-body" compile="thought.html"></div>
-            <ul class="thought-meta-list">
-                <li>{{published(thought) | date:'mediumDate'}}</li>
-                <li>
-                    <a class="permlink" ng-href="#!/thoughts/{{thought.id}}">permlink</a>
-                </li>
-            </ul>
+            <div class="span10 thought-perspective rotated" rotate="">
+                <div class="thought-wrapper">
+                    <div class="thought-header">
+                        <h1 class="head-title"><a class="nolink" ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
+                    </div>
+                    <div class="thought-body markdown-content" compile="thought.html" ng-class="{expanded: thoughtName}"></div>
+                </div>
+            </div>
+            <div class="span2"></div>
         </div>
     </div>
+
 
 </div>

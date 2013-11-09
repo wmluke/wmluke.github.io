@@ -1,119 +1,49 @@
-<div id="iosKeyboardProxy" class="hide"></div>
-
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-
-            <a class="brand" href="/">The Bunsel Blog</a>
-
-            <div class="nav-collapse">
-                <ul class="nav">
-                    <li>
-                        <a href="#!/thoughts/stream/projects" data-toggle="collapse" data-target=".nav-collapse">
-                            <i class="fa fa-rocket"></i>
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#!/thoughts/stream/photos" data-toggle="collapse" data-target=".nav-collapse">
-                            <i class="fa fa-camera"></i>
-                            Photos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#!/thoughts/about" data-toggle="collapse" data-target=".nav-collapse">
-                            <i class="fa fa-user"></i>
-                            About
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container" data-role="page">
 
-    <div class="row" data-role="header"></div>
-    <div class="row">
-        <div class="span1 visible-desktop">&nbsp;</div>
-        <div class="span2 hidden-phone" data-role="left-nav">
-            <img class="photo profile-photo" src="/images/02418e10.profile-paris.jpg">
-
-            <p class="hello-paragraph lead lead-small">
-                Hello, my name is Luke Bunselmeyer. This is my Blog.
-                I hope you like it. Enjoy...
+    <div class="row" data-role="header">
+        <div class="span2 profile-photo-container">
+            <img class="photo profile-photo" src="/images/cd6e8e9c.profile-pic.png">
+        </div>
+        <div class="span10">
+            <p class="hello-paragraph lead">
+                Hello, my name is Luke Bunselmeyer. I’m a fun loving Full-Stack engineer who delights in polyglot programming from back-end to front-end, Java to JavaScript, Web services to Web development.
             </p>
-
-            <div class="clearfix hidden-phone side-nav">
-
-                <h4 class="hd-side-nav" ng-show="thoughts.length>1">{{ stream || 'Home' }}</h4>
-                <ul class="nav nav-pills nav-stacked nav-toc" ng-show="thoughts.length>1">
-                    <li ng-repeat="thought in thoughts">
-                        <a ng-href="#!/thoughts/{{thought.id}}">
-                            <i class="fa fa-plus"></i>
-                            {{ thought.title }}
-                        </a>
-                    </li>
-                </ul>
-
-                <h4 class="hd-side-nav">Connect</h4>
-                <ul class="social-icon-list unstyled">
-
-                    <li>
-                        <a target="_BLANK" href="https://github.com/wmluke">
-                            <i class="fa fa-lg fa-github"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a target="_BLANK" href="http://www.linkedin.com/in/wmluke">
-                            <i class="fa fa-lg fa-linkedin-square"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a target="_BLANK" href="http://www.flickr.com/wmluke">
-                            <i class="fa fa-lg fa-flickr"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a target="_BLANK" href="http://www.facebook.com/wmluke">
-                            <i class="fa fa-lg fa-facebook-square"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a target="_BLANK" href="https://www.google.com/+LukeBunselmeyer">
-                            <i class="fa fa-lg fa-google-plus-square"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a target="_BLANK" href="https://twitter.com/wmluke">
-                            <i class="fa fa-lg fa-twitter-square"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
         </div>
-        <div class="span9" data-role="content">
-            <div class="alert alert-block hide" app-flash="error">
-                <a class="close" data-dismiss="alert" href="#">×</a>
-                <h4 class="alert-heading">Oops!</h4>
-
-                <p class="alert-message">${getFlashError()}</p>
-            </div>
-
-            <div data-block="content-area">[content-area]</div>
-        </div>
+        <div class="span2"></div>
     </div>
+
+    <div class="row" data-role="main-nav">
+        <div class="span2">
+            <h1 class="hd-stream" ng-if="thoughtStream">[ {{ thoughtStream }} ]</h1>
+        </div>
+        <div class="span10">
+            <ul class="nav-pills nav-main unstyled">
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/thoughts/stream/projects">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/thoughts/stream/photos">
+                        Photos
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/thoughts/about">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="span2"></div>
+    </div>
+
+
+    <div data-block="content-area" data-role="body">[content-area]</div>
     <div class="row" data-role="footer"></div>
 </div>
