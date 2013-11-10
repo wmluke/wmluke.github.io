@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="fragment" content="!">
 
-    <link rel="stylesheet" href="styles/c3cde730.main.css">
+    <link rel="stylesheet" href="styles/24564ed2.main.css">
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -26,6 +26,91 @@
     </script>
 </head>
 <body ng-app="clientappBlogApp" ng-cloak="">
+
+<!-- Begin Templates -->
+<script type="text/ng-template" id="/views/layouts/main-layout.html">
+<div class="container" data-role="page">
+
+    <div class="row" data-role="header">
+        <div class="span2 profile-photo-container"></div>
+        <div class="span10">
+            <p class="hello-paragraph lead">
+                Hello, my name is Luke Bunselmeyer. I’m a fun loving Full-Stack engineer who delights in polyglot programming from back-end to front-end, Java to JavaScript, Web services to Web development.
+            </p>
+        </div>
+        <div class="span2"></div>
+    </div>
+
+    <div class="row" data-role="main-nav">
+        <div class="span2">
+            <h1 class="hd-stream" ng-if="thoughtStream">[ {{ thoughtStream }} ]</h1>
+        </div>
+        <div class="span10">
+            <ul class="nav-pills nav-main unstyled">
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/thoughts/stream/projects">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/thoughts/stream/photos">
+                        Photos
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/thoughts/about">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="span2"></div>
+    </div>
+
+
+    <div data-block="content-area" data-role="body">[content-area]</div>
+    <div class="row" data-role="footer"></div>
+</div>
+</script>
+
+<script type="text/ng-template" id="/views/main.html">
+<div data-extend-template="/views/layouts/main-layout.html">
+
+    <div data-block="content-area">
+        <div class="row thought-container" ng-repeat="thought in thoughts">
+            <div class="span2 thought-meta hidden-phone">
+                <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>
+
+                <p class="thought-streams">
+                    <small>
+                        <a ng-href="#!/thoughts/stream/{{ stream }}" class="thought-stream" ng-repeat="stream in thought.streams"> {{ stream }}</a>
+                    </small>
+                </p>
+
+            </div>
+            <div class="span10 thought-perspective rotated" rotate="">
+                <div class="thought-wrapper">
+                    <div class="thought-header">
+                        <h1 class="head-title"><a class="nolink" ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
+                    </div>
+                    <div class="thought-body markdown-content" compile="thought.html" ng-class="{expanded: thoughtName}"></div>
+                </div>
+            </div>
+            <div class="span2"></div>
+        </div>
+    </div>
+
+
+</div>
+</script>
+<!-- End Templates -->
+
+
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -42,7 +127,7 @@
 
 <script src="bower_components/angular/angular.min.js"></script>
 
-<script src="scripts/0b9259f0.scripts.js"></script>
+<script src="scripts/29741578.scripts.js"></script>
 <script type="text/javascript">
     (function () {
         var ga = document.createElement('script');
