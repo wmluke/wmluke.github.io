@@ -1,23 +1,28 @@
 <div data-extend-template="/views/layouts/main-layout.html">
 
     <div data-block="content-area" data-role="body">
-        <div class="row thought-container thought-container-{{ $index+1 }}" ng-repeat="thought in thoughts">
-            <div class="span2 thought-meta hidden-phone">
-                <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>
+        <div class="row row-thought" ng-repeat="thought in thoughts">
+            <div class="span10 thought-container thought-container-{{ $index+1 }} rotated" rotate="">
+                <div class="row">
+                    <div class="span2 thought-meta hidden-phone">
+                        <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>
 
-                <p class="thought-streams">
-                    <small>
-                        <a ng-href="#!/thoughts/stream/{{ stream }}" class="thought-stream" ng-repeat="stream in thought.streams"> {{ stream }}</a>
-                    </small>
-                </p>
+                        <p class="thought-streams">
+                            <small>
+                                <a ng-href="#!/thoughts/stream/{{ stream }}" class="thought-stream" ng-repeat="stream in thought.streams"> {{ stream }}</a>
+                            </small>
+                        </p>
 
-            </div>
-            <div class="span10 thought-perspective rotated" rotate="">
-                <div class="thought-wrapper">
-                    <div class="thought-header">
-                        <h1 class="head-title"><a class="nolink" ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
                     </div>
-                    <div class="thought-body markdown-content" compile="thought.html" ng-class="{expanded: thoughtName}"></div>
+                    <div class="span8">
+                        <div class="thought-page">
+                            <div class="thought-header clearfix">
+                                <h1 class="head-title pull-left"><a class="nolink" ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
+                                <a href="" class="btn btn-select-thought pull-right">Toggle</a>
+                            </div>
+                            <div class="thought-body markdown-content" compile="thought.html" ng-class="{expanded: thoughtName}"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="span2"></div>
