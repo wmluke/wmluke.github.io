@@ -2,7 +2,7 @@
 
     <div data-block="content-area" data-role="body">
         <div class="row row-thought" ng-repeat="thought in thoughts">
-            <div class="span10 thought-container thought-container-{{ $index+1 }} rotated" rotate="">
+            <div class="span10 thought-container thought-container-{{ $index+1 }} rotated" rotate="" open="thoughts.length == 1">
                 <div class="row">
                     <div class="span2 thought-meta hidden-phone">
                         <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>
@@ -17,8 +17,10 @@
                     <div class="span8">
                         <div class="thought-page">
                             <div class="thought-header clearfix">
-                                <h1 class="head-title pull-left"><a class="nolink" ng-href="#!/thoughts/{{thought.id}}">{{ thought.title }}</a></h1>
-                                <a href="" class="btn btn-select-thought pull-right">Toggle</a>
+                                <h1 class="head-title pull-left">
+                                    <a class="nolink btn-select-thought" href="">{{ thought.title }}</a>
+                                </h1>
+                                <a class="nolink permalink pull-right" ng-href="#!/thoughts/{{thought.id}}" title="permalink"><i class="fa fa-link fa-lg"></i></a>
                             </div>
                             <div class="thought-body markdown-content" compile="thought.html" ng-class="{expanded: thoughtName}"></div>
                         </div>
