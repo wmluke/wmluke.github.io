@@ -13,6 +13,12 @@
                             </small>
                         </p>
 
+                        <p>
+                            <small>
+                                <a class="permalink" ng-href="#!/thoughts/{{thought.id}}" title="permalink"><i class="fa fa-link fa-lg"></i></a>
+                            </small>
+                        </p>
+
                     </div>
                     <div class="span8">
                         <div class="thought-page">
@@ -20,7 +26,10 @@
                                 <h1 class="head-title pull-left">
                                     <a class="nolink btn-select-thought" href="">{{ thought.title }}</a>
                                 </h1>
-                                <a class="nolink permalink pull-right" ng-href="#!/thoughts/{{thought.id}}" title="permalink"><i class="fa fa-link fa-lg"></i></a>
+                                <a class="nolink btn-select-thought pull-right btn-toggle" href="" title="more">
+                                    <i class="fa fa-lg icon-more fa-plus-square-o" alt="more"></i>
+                                    <i class="fa fa-lg icon-less fa-minus-square-o" alt="less"></i>
+                                </a>
                             </div>
                             <div class="thought-body markdown-content" compile="thought.html" ng-class="{expanded: thoughtName}"></div>
                         </div>
