@@ -2,7 +2,7 @@
 
     <div data-block="content-area" data-role="body">
         <div class="row row-thought" ng-repeat="thought in thoughts">
-            <div class="span10 thought-container thought-container-{{ $index+1 }} rotated" rotate="" open="thoughts.length == 1">
+            <div class="span10 thought-container thought-container-{{ $index+1 }}" rotate="" ng-class="{rotated:thoughts.length > 1}">
                 <div class="row">
                     <div class="span2 thought-meta hidden-phone">
                         <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>

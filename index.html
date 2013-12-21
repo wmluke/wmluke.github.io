@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="fragment" content="!">
 
-    <link rel="stylesheet" href="styles/a4daa81b.main.css">
+    <link rel="stylesheet" href="styles/e868a96a.main.css">
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -86,7 +86,7 @@
 
     <div data-block="content-area" data-role="body">
         <div class="row row-thought" ng-repeat="thought in thoughts">
-            <div class="span10 thought-container thought-container-{{ $index+1 }} rotated" rotate="" open="thoughts.length == 1">
+            <div class="span10 thought-container thought-container-{{ $index+1 }}" rotate="" ng-class="{rotated:thoughts.length > 1}">
                 <div class="row">
                     <div class="span2 thought-meta hidden-phone">
                         <h1 class="thought-date">{{published(thought) | date:'mediumDate'}}</h1>
@@ -146,7 +146,7 @@
 
 <script src="scripts/4095b010.angular.js"></script>
 
-<script src="scripts/8887a719.scripts.js"></script>
+<script src="scripts/9249e67f.scripts.js"></script>
 <script type="text/javascript">
     (function () {
         var ga = document.createElement('script');
