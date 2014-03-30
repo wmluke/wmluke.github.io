@@ -1,5 +1,5 @@
 /**! 
- * angular-environment v0.1.1
+ * angular-environment v0.1.2
  * Copyright (c) 2013 Ares Project Management LLC <code@prismondemand.com>
  */
 (function () {

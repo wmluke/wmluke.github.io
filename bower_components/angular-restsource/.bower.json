@@ -1,6 +1,6 @@
 {
   "name": "angular-restsource",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Ares Project Management LLC <code@prismondemand.com>",
   "homepage": "https://github.com/AresProjectManagement/angular-restsource",
   "repository": {
@@ -30,22 +30,22 @@
     "Makefile"
   ],
   "dependencies": {
-    "angular": "1.0 - 1.2"
+    "angular": "~1.2"
   },
   "devDependencies": {
-    "angular-mocks": "~1.2.0",
-    "angular-scenario": "~1.2.0",
-    "angular-route": "~1.2.0",
+    "angular-mocks": "~1.2",
+    "angular-scenario": "~1.2",
+    "angular-route": "~1.2",
     "sass-bootstrap": "~2.3.1",
     "json3": "~3.2.4",
     "es5-shim": "~2.0.8",
     "bootstrap": "~3.0.0-rc1"
   },
-  "_release": "0.2.2",
+  "_release": "0.2.3",
   "_resolution": {
     "type": "version",
-    "tag": "0.2.2",
-    "commit": "91e9e30f5a6821b001f46cc268166e7920f3588f"
+    "tag": "0.2.3",
+    "commit": "7d646b25de34e62995324c14c7c19238bb38892f"
   },
   "_source": "git://github.com/AresProjectManagement/angular-restsource.git",
   "_target": "~0.2.0",

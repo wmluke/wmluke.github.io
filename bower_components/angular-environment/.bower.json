@@ -1,6 +1,6 @@
 {
   "name": "angular-environment",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Ares Project Management LLC <code@prismondemand.com>",
   "homepage": "https://github.com/AresProjectManagement/angular-environment",
   "repository": {
@@ -30,21 +30,22 @@
     "Makefile"
   ],
   "dependencies": {
-    "angular": "1.1 - 1.2.0"
+    "angular": "~1.2"
   },
   "devDependencies": {
-    "angular-mocks": "~1.2.0",
-    "angular-scenario": "~1.2.0",
-    "angular-route": "~1.2.0",
+    "angular": "=1.2.6",
+    "angular-mocks": "=1.2.6",
+    "angular-scenario": "=1.2.6",
+    "angular-route": "=1.2.6",
     "sass-bootstrap": "~2.3.1",
     "json3": "~3.2.4",
     "es5-shim": "~2.0.8"
   },
-  "_release": "0.1.1",
+  "_release": "0.1.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.1",
-    "commit": "458bf17bfc081273c55e1caa4cebde50a2e5527c"
+    "tag": "0.1.2",
+    "commit": "778cb496aa00473ddd325adab21cb024d19d53f5"
   },
   "_source": "git@github.com:AresProjectManagement/angular-environment.git",
   "_target": "*",

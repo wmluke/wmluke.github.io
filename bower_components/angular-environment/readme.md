@@ -1,13 +1,27 @@
 # angular-environment
 > Environment variables for AngularJS
 
+`angular-environment` provides `environmentProvider` and `environment`.
+
+* Use `environmentProvider` within config blocks to put and get environment variables.
+* Use `environment` within controllers and services to get environment variables.
+
 ## Installation
 
 ```javascript
-angular.module('angular-environment-demo-app', ['angular-environment'])
+/**
+ * Create an environment module somewhere: generated at build-time or generated at run-time by the server.
+ */
+angular.module('demo-app-environment', ['angular-environment'])
     .config(['environmentProvider', function (environmentProvider) {
         environmentProvider.put('foo', 'bar');
-    }])
+        environmentProvider.put('aaa', '111');
+    }]);
+
+/**
+ * Include the environment module in your app module
+ */
+angular.module('angular-environment-demo-app', ['angular-environment', 'demo-app-environment'])
     .config(['$routeProvider', 'environmentProvider', function ($routeProvider, environmentProvider) {
         $routeProvider
             .when('/', {
@@ -18,6 +32,7 @@ angular.module('angular-environment-demo-app', ['angular-environment'])
                 redirectTo: '/'
             });
 
+        // Use env vars within config blocks
         console.log(environmentProvider.get('foo'));
     }]);
 ```
